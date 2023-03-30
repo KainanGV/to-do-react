@@ -52,22 +52,24 @@ export function ListTaks() {
               </div>
           </section>
 
-          <section className={styles['c-listtask__noregisters']}>
-              <img src={clipboard} alt="" />
-              <h4 className={styles['c-listtask__noregisters__title']}>Você ainda não tem tarefas cadastradas</h4>
-              <p  className={styles['c-listtask__noregisters__content']}>Crie tarefas e organize seus itens a fazer</p>
-          </section>
-
           {
-            tasks.map(task => (
-              <Task 
-                key={task} 
-                content={task} 
-                onChangeValueCheckbox={handleChangeValueCheckbox}
-                onDeleteTask={handleDeleteTask}
-              />
-            ))
+            !tasks.length ?
+              (<section className={styles['c-listtask__noregisters']}>
+                  <img src={clipboard} alt="" />
+                  <h4 className={styles['c-listtask__noregisters__title']}>Você ainda não tem tarefas cadastradas</h4>
+                  <p  className={styles['c-listtask__noregisters__content']}>Crie tarefas e organize seus itens a fazer</p>
+              </section>) : 
+              tasks.map(task => (
+                <Task 
+                  key={task} 
+                  content={task} 
+                  onChangeValueCheckbox={handleChangeValueCheckbox}
+                  onDeleteTask={handleDeleteTask}
+                />
+              ))
           }
+
+
 
         </div>
       </main>
