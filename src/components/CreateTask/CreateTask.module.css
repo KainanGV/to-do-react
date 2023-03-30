@@ -1,0 +1,57 @@
+.c-createtask {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+
+  margin-top: -2rem;
+}
+
+.c-createtask__input {
+  width: 39.875rem;
+  height: 3.375rem;
+
+  padding: 1rem;
+
+  background: var(--gray-500);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+
+  color: var(--gray-100);
+
+  font-weight: 400;
+}
+
+.c-createtask__input:focus-visible {
+  border: 1px solid var(--purple-dark);
+  outline: none;
+}
+
+.c-createtask__button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  border-radius: 8px;
+  border: none;
+
+  width: 5.625rem;
+  height: 3.35rem;
+
+  padding: 1rem;
+  background: var(--blue-dark);
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.c-createtask__button-wrapper:hover {
+  background-color: var(--blue);
+}
+
+.c-createtask__button__span {
+  font-family: 'Inter' sans-serif;
+  font-weight: 700;
+  font-size: .875rem;
+  line-height: 140%;
+  color: var(--gray-100);
+}
